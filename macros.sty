@@ -326,6 +326,17 @@
   \end{tcolorbox}
 }
 
+
+\newcounter{question}
+\renewcommand{\thequestion}{\thesection.\arabic{question}}
+
+\newcommand{\question}[1]{%
+  \par\bigskip % 上面加一个垂直间距换行
+  \noindent\textbf{Question \thequestion\quad #1}\par % 整行加粗
+  \refstepcounter{question}%
+}
+
+
 % 高亮背景
 \newcommand{\ghl}[1]{\colorbox{lightgray}{#1}}
 \definecolor{darkred}{HTML}{B22222} % 自定义暗红色（可改成喜欢的 RGB/HTML 值）
